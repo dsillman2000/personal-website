@@ -1,0 +1,7 @@
+Simulation
+Generative
+Mathematics
+Statistics
+Python
+R
+Processing

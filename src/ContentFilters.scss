@@ -1,0 +1,69 @@
+@import './styles/_common.scss';
+
+$font-title: HelveticaNeue;
+$font-stack: HelveticaNeue;
+
+h2.contentfiltertitle {
+  font: bolder 150% $font-title;
+  border-bottom: 1px lightgray solid;
+  margin: 10px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+span.contentfilters {
+  grid-row: 2;
+  grid-column: 1;
+  margin-right: 15px;
+  border: 1px lightgray solid;
+  border-radius: 2.5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font: 100% $font-stack;
+  height: fit-content;
+}
+span.filtercontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+span.filtertoken {
+  font: bold 75% $font-stack;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  vertical-align: center;
+  border-radius: 5px;
+  background-color: #05b8ff;
+  padding: 10px;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+
+  flex-shrink: 1;
+  margin: 2px;
+  &::before {
+    background-image: url('https://svgur.com/i/Y6k.svg');
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    align-content: center;
+    content: "";
+    -webkit-transition: transform 200ms ease-out;
+    -moz-transition: transform 200ms ease-out;
+    -o-transition: transform 200ms ease-out;
+    transition: transform 200ms ease-out;
+  }
+}
+input.filtercheck:checked + label > span {
+  cursor: pointer;
+  background-color: #628182
+}
+input.filtercheck:checked + label > span::before {
+  cursor: pointer;
+  transform: rotate(45deg);
+}

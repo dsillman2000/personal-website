@@ -1,0 +1,76 @@
+@import './styles/_common.scss';
+
+$font-stack: HelveticaNeue;
+$logo-size: 40px;
+
+@mixin navbaritem {
+  padding-left: 5%;
+  padding-right: 5%;
+  border-right: 1px lightgray solid;
+  margin-left: 0px;
+  margin-right: 3px;
+  border-left: 1px lightgray solid;
+  text-decoration: none;
+  color: black;
+}
+div.navbar {
+  display: grid;
+  grid-row: 1;
+  grid-column: 1/3;
+  grid-template-rows: 100%;
+  grid-template-columns: 5% 20% 25% 25% auto;
+  font: 100% $font-stack;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px lightgray solid;
+  align-items: center;
+}
+div.navbartitle {
+  grid-row: 1;
+  grid-column: 2;
+  font: bolder 150% $font-stack;
+}
+img.navbarlogo {
+  grid-row: 1;
+  grid-column: 1;
+  width: $logo-size;
+  // border: 2px black solid;
+  // border-radius: 18px;
+  padding: 2px;
+  &:hover {
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  animation-duration: 1s;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+a.navbarblog {
+  @include navbaritem;
+  font: 100% $font-stack;
+  grid-row: 1;
+  grid-column: 3;
+}
+a.navbarresume {
+  @include navbaritem;
+  grid-row: 1;
+  grid-column: 4;
+}
+a.navbarcontact {
+  @include navbaritem;
+  grid-row: 1;
+  grid-column: 5;
+}
