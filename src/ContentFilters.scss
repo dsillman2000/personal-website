@@ -14,6 +14,10 @@ h2.contentfiltertitle {
 span.contentfilters {
   grid-row: 2;
   grid-column: 1;
+  // position:-webkit-sticky;
+  // position:sticky;
+  // left:0px;
+  // top:75px;
   margin-right: 15px;
   border: 1px lightgray solid;
   border-radius: 2.5px;
@@ -42,6 +46,9 @@ span.filtertoken {
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 
   flex-shrink: 1;
   margin: 2px;

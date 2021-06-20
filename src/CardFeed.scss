@@ -24,7 +24,7 @@ div.cardcontainer {
   align-items: center;
   border: 1px lightgray solid;
   border-radius: 2.5px;
-  margin-bottom: 5vh;
+  margin-bottom: 30px;
   //width: $content-width;
 }
 
@@ -47,6 +47,10 @@ p.cardcontent {
   font: 100% $font-stack;
   margin: 10px;
   width: $content-inner;
+  &::before {
+    white-space: pre;
+    content: '            ';
+  }
   //border: 1px black solid;
 }
 
